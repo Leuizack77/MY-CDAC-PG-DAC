@@ -1,0 +1,200 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="formContainer">
+        <label for="fnumber"> Enter First Number:</label>
+        <input type="number" id="fnumber" placeholder="first num">
+        <br>
+        <br>
+
+        <label for="snumber"> Enter Second Number:</label>
+        <input type="number" id="snumber" placeholder="second num">
+        <br>
+        <br>
+
+        <button onclick="Calculate('addition')"> Addition </button>
+        <button onclick="Calculate('subtraction')"> Subtraction </button>
+        <button onclick="Calculate('multiplication')"> Multiplication </button>
+        <button onclick="Calculate('division')"> Division </button>
+
+        <h2> <p id="result"> </p> </h2>
+    </div>
+
+    <script>
+
+        function display(result) 
+        {
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function addition(fnum, snum, mycallback)
+        {
+            let result = fnum + snum;
+            mycallback(result);
+        }
+
+        function subtraction(fnum, snum, mycallback)
+        {
+            let result = fnum - snum;
+            mycallback(result);
+        }
+
+        function multiplication(fnum, snum, mycallback)
+        {
+            let result = fnum * snum;
+            mycallback(result);
+        }
+
+        function division(fnum, snum, mycallback)
+        {
+            let result = fnum / snum;
+            mycallback(result);
+        }
+
+
+        function Calculate()
+        {
+            let fnum = parseFloat(document.getElementById("fnum").value);
+            let snum = parseFloat(document.getElementById("snum").value);
+
+            if(isNaN(fnum)||(isNaN(snum)))
+            {
+                display("Please enter the valid number.");
+                return;
+            }
+
+            switch(operation)
+            {
+                case "addition":
+                    addition(fnum, snum, display);
+                    break;
+
+                    case "subtraction":
+                    addition(fnum, snum, display);
+                    break;
+
+                    case "multiplication":
+                    addition(fnum, snum, display);
+                    break;
+
+                    case "division":
+                    addition(fnum, snum, display);
+                    break;
+
+                    default:
+                        display("unknown operation");
+            }
+        }
+
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <div id="formContainer">
+            <label for="fnumber"> Enter First Number:  </label>
+            <input type="number" id="fnumber" placeholder="first number">
+            <br>
+            <br>
+
+            <label for="snumber"> Enter Second Number:  </label>
+            <input type="number" id="snumber" placeholder="second number">
+            <br>
+            <br>
+
+            <button onclick="calculate('addition')"> Addition </button>
+            <button onclick="calculate('subtraction')"> Subtraction </button>
+            <button onclick="calculate('multiplication')"> Multiplication </button>
+            <button onclick="calculate('division')"> Division </button>
+
+            <h2>  <p id="result">  </p>   </h2>
+        </div>
+
+        <script>
+            function display(result)
+            {
+                document.getElementById("result").innerHTML = result;
+            }
+
+
+            function addition(fnumber, snumber, mycallback)
+            {
+                let result = fnumber + snumber;
+                
+                mycallback(result);
+            }
+
+            function subtraction(fnumber, snumber, mycallback)
+            {
+                let result = fnumber - snumber;
+
+                mycallback(result);
+            }
+
+            function multiplication(fnumber, snumber, mycallback)
+            {
+                let result = fnumber * snumber;
+
+                mycallback(result);
+            }
+
+            function division(fnumber, snumber, mycallback)
+            {
+                let result = fnumber / snumber;
+
+                mycallback(result);
+            }
+
+            function calculate(operation)
+            {
+                let fnumber = parseFloat(document.getElementById("fnumber").value);
+                let snumber = parseFloat(document.getElementById("snumber").value);
+
+                if (isNaN(fnumber)||(isNaN(snumber)))
+            {
+                display("please enter the valid number.");
+                return;
+            }
+
+            switch(operation)
+            {
+                case "addition":
+                    addition(fnumber,snumber,display);
+                    break;
+
+                case "subtraction":
+                    subtraction(fnumber,snumber,display);
+                    break;
+                    
+                case "multiplication":
+                    multiplication(fnumber,snumber,display);
+                    break;
+                
+                case "division":
+                    division(fnumber,snumber,display);
+                    break;
+                 
+                default:
+                    display("unknown operation");    
+                        
+            }
+
+            
+            }
+            
+        </script>
+             
+
+    </body>
+</html>
